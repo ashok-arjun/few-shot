@@ -21,6 +21,8 @@ from few_shot.utils import AverageMeter, GradualWarmupScheduler
 from few_shot.utils import accuracy, get_assigned_file, get_resume_file, get_best_file, get_few_shot_label
 
 
+torch.cuda.set_device(0)
+
 def train(model, train_loader, optimizer, summary_writer, epoch, scheduler=None):
     train_loss = AverageMeter()
     data_time = AverageMeter()

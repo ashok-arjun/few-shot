@@ -76,7 +76,7 @@ cfg = CfgNode(dict(
         split="novel",  # 'base/val/novel'
         num_episode=600,  # number of task to run for test
         n_way=5,  # number of classes to test
-        n_support=[1, 5],  # both test one shot and five shot
+        n_support=[5],  # both test one shot and five shot
         n_query=16,  # number of queries to test per task
         batch_size=256,  # used when extracting feature
     ),
