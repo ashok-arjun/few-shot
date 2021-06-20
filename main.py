@@ -23,11 +23,13 @@ from few_shot.utils import accuracy, get_assigned_file, get_resume_file, get_bes
 
 torch.cuda.set_device(0)
 
+train_loss = AverageMeter()
+top1 = AverageMeter()
+
 def train(model, train_loader, optimizer, summary_writer, epoch, scheduler=None):
-    train_loss = AverageMeter()
+  
     data_time = AverageMeter()
-    batch_time = AverageMeter()
-    top1 = AverageMeter()
+    batch_time = AverageMeter()  
 
     model.train()
 
